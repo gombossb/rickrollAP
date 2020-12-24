@@ -1,0 +1,10 @@
+server{
+    listen 80;
+    root /var/www/rickportal;        
+
+    location / {
+        if (!-f $request_filename){
+            return 302 $scheme://192.168.10.254/index.html;
+        }
+    }
+}

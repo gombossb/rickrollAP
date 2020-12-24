@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Free Wi-Fi</title>
+	<style>
+		* {margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif;}
+		body {text-align: center;}
+		header {width: 100%; background-color: #000; color: #fff; padding: 5px;}
+		header div {height: 30px; margin: auto;}
+		header img {height: 100%; filter: drop-shadow(0px 0px 4px rgba(255,255,255,1));}
+		header span {position: relative; bottom: 8px;}
+		#wrapper {width: 95%; margin: auto;}
+		#text {padding: 5px; margin: 7px 3px;}
+		.video {display: none;}
+		video {width: 100%;}
+		button {padding: 8px 10px; font-size: 130%; margin: 8px 0;}
+	</style>
+	<script>
+		function rick(){
+			document.getElementsByClassName("video")[0].style.display = "block";
+			document.getElementById("video").play();
+			document.querySelector("button").disabled = true;
+			document.querySelector("button").innerText = "Nope :c"
+		}
+	</script>
+</head>
+<body>
+	<header>
+		<div>
+			<img src="./wifi.png" alt="WiFi">
+			<span>Free Wi-Fi</span>
+		</div>
+	</header>
+	<div id="wrapper">
+		<div id="text">In order to use our free Wi-Fi services, please tap the login button.</div>
+		<div class="video">
+			<video id="video" controls>
+				<source src="./rick.mp4" type="video/mp4">
+			</video>
+		</div>
+		<button onclick="rick(); return false;">Login</button>
+	</div>
+</body>
+</html>
