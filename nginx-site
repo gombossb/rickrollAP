@@ -1,6 +1,7 @@
 server{
     listen 80;
-    root /var/www/rickportal;        
+    server_name 192.168.10.254;
+    root /var/www/rickportal;
 
     location / {
         if (!-f $request_filename){

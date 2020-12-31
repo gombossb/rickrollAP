@@ -19,11 +19,12 @@ cd rickrollAP
 sudo apt update
 sudo apt install hostapd dnsmasq nginx
 ```
-3. Copy captive portal to /var/www, site configuration to nginx sites and symlink it to get enabled
+3. Copy captive portal to /var/www, captive portal configuration to nginx sites, symlink it to get enabled and remove default site configuration
 ```bash
 sudo cp -r rickportal/ /var/www/
 sudo cp nginx-site /etc/nginx/sites-available/rickrollap
 sudo ln -s /etc/nginx/sites-available/rickrollap /etc/nginx/sites-enabled/
+sudo rm /etc/nginx/sites-enabled/default
 ```
 4. Use this sed code to change your Wi-Fi interface if it's not wlan1
 ```bash
