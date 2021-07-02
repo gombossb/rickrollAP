@@ -1,8 +1,8 @@
 #!/bin/bash
 cd $(dirname $BASH_SOURCE)
 echo "Stopping rickrollAP at" `date` | tee -a rickrollap.log
-pkill hostapd
-pkill dnsmasq
+for pid in $(pgrep -f "dnsmasq -C ./rdnsmasq.conf"); do kill $pid; done
+for pid in $(pgrep -f "hostapd ./rhostapd.conf"); do kill $pid; done
 systemctl stop nginx
 # use the appropriate wifi interface
 ifconfig wlan1 down
