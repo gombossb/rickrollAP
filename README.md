@@ -46,4 +46,4 @@ sudo bash stop.sh
 ```
 
 ### PS
-Kudos to hash3liZer for his article on [shellvoide.com](https://www.shellvoide.com/wifi/how-to-setup-captive-portal-login-with-rogue-ap-nginx/), it's helped me a lot with this project.
+Kudos to hash3liZer for his article on [shellvoide.com](https://web.archive.org/web/20210119231436/https://www.shellvoide.com/wifi/how-to-setup-captive-portal-login-with-rogue-ap-nginx/)(Wayback Machine), it's helped me a lot with this project.
